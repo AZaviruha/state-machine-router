@@ -80,9 +80,13 @@ let router = new Router({
 router.start();
 
 
-function showIndex() {
+function showIndex(router, data, meta) {
 	return new Promise((resolve) => {
 		// load and render screen teplate, etc
+		...
+
+		// then, on some Users's click
+		router.process('users_requested');
 	});
 }
 
