@@ -7,6 +7,88 @@
 ## Status
 In progress...
 
+## Usage
+
+```javascript
+import { Router } from 'state-machine-router';
+
+let router = new Router({
+    index: {
+        url   : '/',
+        title : 'Demo Appication',
+
+        transitions : {
+            'users_requested' : 'users',
+            'about_requested' : 'about'
+        },
+
+        enter  : showIndex
+    },
+
+    users: {
+        url   : '/users/',
+        title : 'Users Info',
+
+        transitions : {
+            'userDetails_requested' : 'userDetails',
+            'about_requested'       : 'about'
+        },
+
+        enter  : showUsers
+    },
+
+    userDetails: {
+        // http://www.regular-expressions.info/named.html
+        url      : '/users/(:<userId>[0-9]+)/',
+        title    : 'User Details',
+
+        transitions : {
+            'back_requested'            : 'users',
+            'userDetails_requested'     : 'userDetails',
+            'userBookDetails_requested' : 'userBookDetails',
+            'about_requested'           : 'about'
+        },
+
+        enter  : showUser
+    },
+
+    userBookDetails: {
+        url      : '/users/(:<userId>[0-9]+)/book/(:<bookId>[0-9]+)/',
+        title    : 'Book Details',
+
+        transitions : {
+            'userDetails_requested' : 'userDetails',
+            'about_requested'       : 'about'
+        },
+
+        enter  : showUserBook
+    },
+
+    about: {
+        url      : '/about/',
+        title    : 'About',
+
+        transitions : {
+            'index_requested': 'index'
+        },
+
+        enter  : showAbout
+    }
+});
+
+
+router.start();
+
+
+function showIndex() {
+	return new Promise((resolve) => {
+		// load and render screen teplate, etc
+	});
+}
+
+...
+```
+
 ## Features
 - automatically calculates the router's state from the `window.location.href`, on page load
 - named regexp in URL definition
