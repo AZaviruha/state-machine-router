@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:azaviruha/state-machine-router.git"
+    "url": "git@github.com:AZaviruha/state-machine-router.git"
   },
   "keywords": [
     "fsm",
@@ -30,7 +30,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
     "literate-programming-lib": "^1.9.0",
-    "literify": "^0.1.0",
     "litpro": "^0.12.1",
     "rimraf": "^2.5.0",
     "vinyl-buffer": "^1.0.0",
