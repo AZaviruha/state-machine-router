@@ -312,3 +312,6 @@ export function urlRegExpToTemplate(urlRe) {
     return replaced;
 }
 ```
+
+[literate-image]: https://img.shields.io/badge/literate%20programming--brightgreen.svg
+[literate-url]: https://en.wikipedia.org/wiki/Literate_programming
