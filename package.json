@@ -1,0 +1,44 @@
+{
+  "name": "state-machine-router",
+  "version": "0.1.0",
+  "description": "Declarative routing based on finite state machine",
+  "main": "build/state-machine-router.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:azaviruha/state-machine-router.git"
+  },
+  "keywords": [
+    "fsm",
+    "routing",
+    "router",
+    "declarative"
+  ],
+  "author": "Alexei Zaviruha <a.zaviruha@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-literate2": "^0.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "literate-programming-lib": "^1.9.0",
+    "literify": "^0.1.0",
+    "litpro": "^0.12.1",
+    "rimraf": "^2.5.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "kristi": "^0.1.2",
+    "named-regexp": "^0.1.1",
+    "string-format": "^0.5.0"
+  }
+}
